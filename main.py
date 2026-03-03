@@ -8,7 +8,8 @@ def home():
 def create_user(name :str):
     users.append(name)
     return{"message":f"user {name} added"}
-@app.get("/users"):
+@app.get("/users")
+def get_users():
     return {"users": users}
 
 
